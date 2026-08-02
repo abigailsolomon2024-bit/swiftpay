@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | SwiftPay</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- SwiftPay CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- DASHBOARD HEADER -->
+    <!-- ================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h2>
+                SwiftPay
+            </h2>
+
+            <p>
+                Welcome back 👋
+            </p>
+
+        </div>
+
+
+        <!-- Notification -->
+
+        <button
+            class="notification-button"
+            id="notificationButton"
+        >
+            🔔
+        </button>
+
+    </header>
+
+
+
+    <!-- ================================= -->
+    <!-- MAIN DASHBOARD -->
+    <!-- ================================= -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ================================= -->
+        <!-- USER GREETING -->
+        <!-- ================================= -->
+
+        <section class="welcome-section">
+
+            <p>
+                Hello,
+            </p>
+
+            <h1 id="userName">
+                SwiftPay User
+            </h1>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- WALLET BALANCE -->
+        <!-- ================================= -->
+
+        <section class="balance-card">
+
+            <p>
+                Available Balance
+            </p>
+
+            <h1 id="walletBalance">
+                ₦0.00
+            </h1>
+
+
+            <button id="addMoneyButton">
+
+                + Add Money
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- QUICK ACTIONS -->
+        <!-- ================================= -->
+
+        <section class="quick-actions">
+
+
+            <h2>
+                Quick Actions
+            </h2>
+
+
+            <div class="action-grid">
+
+
+                <!-- Send Money -->
+
+                <button
+                    class="action-card"
+                    id="sendMoneyButton"
+                >
+
+                    <span>
+                        📤
+                    </span>
+
+                    <p>
+                        Send Money
+                    </p>
+
+                </button>
+
+
+
+                <!-- Receive Money -->
+
+                <button
+                    class="action-card"
+                    id="receiveMoneyButton"
+                >
+
+                    <span>
+                        📥
+                    </span>
+
+                    <p>
+                        Receive Money
+                    </p>
+
+                </button>
+
+
+
+                <!-- Airtime -->
+
+                <button
+                    class="action-card"
+                    id="airtimeButton"
+                >
+
+                    <span>
+                        📱
+                    </span>
+
+                    <p>
+                        Airtime
+                    </p>
+
+                </button>
+
+
+
+                <!-- Data -->
+
+                <button
+                    class="action-card"
+                    id="dataButton"
+                >
+
+                    <span>
+                        🌐
+                    </span>
+
+                    <p>
+                        Data
+                    </p>
+
+                </button>
+
+
+
+                <!-- Electricity -->
+
+                <button
+                    class="action-card"
+                    id="electricityButton"
+                >
+
+                    <span>
+                        💡
+                    </span>
+
+                    <p>
+                        Electricity
+                    </p>
+
+                </button>
+
+
+
+                <!-- Cable TV -->
+
+                <button
+                    class="action-card"
+                    id="cableButton"
+                >
+
+                    <span>
+                        📺
+                    </span>
+
+                    <p>
+                        Cable TV
+                    </p>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- RECENT TRANSACTIONS -->
+        <!-- ================================= -->
+
+        <section class="transactions-section">
+
+
+            <div class="section-header">
+
+                <h2>
+                    Recent Transactions
+                </h2>
+
+                <a href="transactions.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div
+                id="recentTransactions"
+                class="transactions-list"
+            >
+
+                <p class="empty-transactions">
+                    No transactions yet.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="dashboard.html"
+            class="nav-item active"
+        >
+
+            <span>
+                🏠
+            </span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+
+        <a
+            href="wallet.html"
+            class="nav-item"
+        >
+
+            <span>
+                💳
+            </span>
+
+            <small>
+                Wallet
+            </small>
+
+        </a>
+
+
+
+        <a
+            href="transactions.html"
+            class="nav-item"
+        >
+
+            <span>
+                📜
+            </span>
+
+            <small>
+                History
+            </small>
+
+        </a>
+
+
+
+        <a
+            href="profile.html"
+            class="nav-item"
+        >
+
+            <span>
+                👤
+            </span>
+
+            <small>
+                Profile
+            </small>
+
+        </a>
+
+<button
+    id="logoutButton"
+    class="logout-button"
+>
+    🚪 Logout
+</button>
+    </nav>
+
+
+
+    <!-- ================================= -->
+    <!-- SUPABASE -->
+    <!-- ================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

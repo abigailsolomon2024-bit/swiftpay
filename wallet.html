@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Wallet | SwiftPay</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- SwiftPay CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- WALLET HEADER -->
+    <!-- ================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h2>
+                SwiftPay
+            </h2>
+
+            <p>
+                My Wallet
+            </p>
+
+        </div>
+
+
+        <a
+            href="dashboard.html"
+            class="back-button"
+        >
+            ←
+        </a>
+
+    </header>
+
+
+
+    <!-- ================================= -->
+    <!-- WALLET CONTENT -->
+    <!-- ================================= -->
+
+    <main class="dashboard-container">
+
+
+        <!-- Wallet Balance -->
+
+        <section class="balance-card">
+
+            <p>
+                Available Balance
+            </p>
+
+            <h1 id="walletBalance">
+                ₦0.00
+            </h1>
+
+        </section>
+
+
+
+        <!-- Wallet Actions -->
+
+        <section class="quick-actions">
+
+            <h2>
+                Wallet Actions
+            </h2>
+
+
+            <div class="action-grid">
+
+
+                <button
+                    class="action-card"
+                    id="addMoneyButton"
+                >
+
+                    <span>
+                        💰
+                    </span>
+
+                    <p>
+                        Add Money
+                    </p>
+
+                </button>
+
+
+                <button
+                    class="action-card"
+                    id="sendMoneyButton"
+                >
+
+                    <span>
+                        📤
+                    </span>
+
+                    <p>
+                        Send Money
+                    </p>
+
+                </button>
+
+
+                <button
+                    class="action-card"
+                    id="receiveMoneyButton"
+                >
+
+                    <span>
+                        📥
+                    </span>
+
+                    <p>
+                        Receive Money
+                    </p>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Transaction History -->
+
+        <section class="transactions-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Recent Transactions
+                </h2>
+
+            </div>
+
+
+            <div id="recentTransactions">
+
+                <p class="empty-transactions">
+                    No transactions yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="dashboard.html"
+            class="nav-item"
+        >
+
+            <span>
+                🏠
+            </span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="wallet.html"
+            class="nav-item active"
+        >
+
+            <span>
+                💳
+            </span>
+
+            <small>
+                Wallet
+            </small>
+
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="nav-item"
+        >
+
+            <span>
+                📜
+            </span>
+
+            <small>
+                History
+            </small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>
+                👤
+            </span>
+
+            <small>
+                Profile
+            </small>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- ================================= -->
+    <!-- SUPABASE -->
+    <!-- ================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

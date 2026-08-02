@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Send Money | SwiftPay</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-logo">
+            💸
+        </div>
+
+        <h1>
+            Send Money
+        </h1>
+
+        <p>
+            Transfer money securely with SwiftPay.
+        </p>
+
+
+        <form id="sendMoneyForm">
+
+
+            <!-- BENEFICIARY NAME -->
+
+            <input
+                type="text"
+                id="beneficiaryName"
+                placeholder="Beneficiary Name"
+                required
+            >
+
+
+            <!-- SWIFTPAY ACCOUNT NUMBER -->
+
+            <input
+                type="text"
+                id="receiverAccountNumber"
+                placeholder="SwiftPay Account Number"
+                maxlength="10"
+                inputmode="numeric"
+                required
+            >
+
+
+            <!-- AMOUNT -->
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount (₦)"
+                min="100"
+                required
+            >
+
+
+            <!-- DESCRIPTION -->
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Description (Optional)"
+            >
+
+
+            <button
+                type="submit"
+                id="sendMoneyButton"
+            >
+                Continue
+            </button>
+
+
+            <p id="sendMoneyMessage"></p>
+
+        </form>
+
+
+        <p class="signup-text">
+
+            <a href="dashboard.html">
+                ← Back to Dashboard
+            </a>
+
+        </p>
+
+    </div>
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

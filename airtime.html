@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Buy Airtime | SwiftPay</title>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head><body><header class="dashboard-header">
+
+    <div>
+
+        <h2>
+            SwiftPay
+        </h2>
+
+        <p>
+            Buy Airtime
+        </p>
+
+    </div>
+
+    <a
+        href="dashboard.html"
+        class="back-button"
+    >
+        ←
+    </a>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="quick-actions">
+
+        <h2>
+            Airtime Purchase
+        </h2>
+
+        <p>
+            Buy airtime for your phone number.
+        </p>
+
+
+        <form id="airtimeForm">
+
+            <input
+                type="tel"
+                id="airtimePhone"
+                placeholder="Phone Number"
+                required
+            >
+
+
+            <select
+                id="airtimeNetwork"
+                required
+            >
+
+                <option value="">
+                    Select Network
+                </option>
+
+                <option value="MTN">
+                    MTN
+                </option>
+
+                <option value="Airtel">
+                    Airtel
+                </option>
+
+                <option value="Glo">
+                    Glo
+                </option>
+
+                <option value="9mobile">
+                    9mobile
+                </option>
+
+            </select>
+
+
+            <input
+                type="number"
+                id="airtimeAmount"
+                placeholder="Amount (₦)"
+                min="50"
+                required
+            >
+
+
+            <button
+                type="submit"
+                id="airtimeButton"
+            >
+                Buy Airtime
+            </button>
+
+
+            <p id="airtimeMessage"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+    <a
+        href="dashboard.html"
+        class="nav-item"
+    >
+        <span>🏠</span>
+        <small>Home</small>
+    </a>
+
+    <a
+        href="wallet.html"
+        class="nav-item"
+    >
+        <span>💳</span>
+        <small>Wallet</small>
+    </a>
+
+    <a
+        href="transactions.html"
+        class="nav-item"
+    >
+        <span>📜</span>
+        <small>History</small>
+    </a>
+
+    <a
+        href="profile.html"
+        class="nav-item"
+    >
+        <span>👤</span>
+        <small>Profile</small>
+    </a>
+
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="app.js"></script>
+
+</body></html>

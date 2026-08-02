@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Add Money | SwiftPay</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- HEADER -->
+    <!-- ================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h2>
+                SwiftPay
+            </h2>
+
+            <p>
+                Add Money
+            </p>
+
+        </div>
+
+
+        <a
+            href="wallet.html"
+            class="back-button"
+        >
+            ←
+        </a>
+
+    </header>
+
+
+
+    <!-- ================================= -->
+    <!-- ADD MONEY -->
+    <!-- ================================= -->
+
+    <main class="dashboard-container">
+
+
+        <section class="balance-card">
+
+            <h2>
+                Add Money to Wallet
+            </h2>
+
+            <p>
+                Enter the amount you want to add
+                to your SwiftPay wallet.
+            </p>
+
+
+            <form id="addMoneyForm">
+
+
+                <input
+                    type="number"
+                    id="addMoneyAmount"
+                    placeholder="Enter amount"
+                    min="100"
+                    step="1"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    id="addMoneyButton"
+                >
+                    Continue
+                </button>
+
+
+                <p
+                    id="addMoneyMessage"
+                ></p>
+
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="dashboard.html"
+            class="nav-item"
+        >
+
+            <span>
+                🏠
+            </span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="wallet.html"
+            class="nav-item active"
+        >
+
+            <span>
+                💳
+            </span>
+
+            <small>
+                Wallet
+            </small>
+
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="nav-item"
+        >
+
+            <span>
+                📜
+            </span>
+
+            <small>
+                History
+            </small>
+
+        </a>
+
+
+        <a
+            href="profile.html"
+            class="nav-item"
+        >
+
+            <span>
+                👤
+            </span>
+
+            <small>
+                Profile
+            </small>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- ================================= -->
+    <!-- SUPABASE -->
+    <!-- ================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

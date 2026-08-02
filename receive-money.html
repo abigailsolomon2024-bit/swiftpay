@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Receive Money | SwiftPay</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- HEADER -->
+    <!-- ================================= -->
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <h2>
+                SwiftPay
+            </h2>
+
+            <p>
+                Receive Money
+            </p>
+
+        </div>
+
+
+        <a
+            href="dashboard.html"
+            class="back-button"
+        >
+            ←
+        </a>
+
+    </header>
+
+
+
+    <!-- ================================= -->
+    <!-- RECEIVE MONEY -->
+    <!-- ================================= -->
+
+    <main class="dashboard-container">
+
+
+        <section class="balance-card">
+
+            <p>
+                Your SwiftPay Email
+            </p>
+
+            <h2 id="receiveEmail">
+                Loading...
+            </h2>
+
+            <p>
+                Share this email with another SwiftPay user
+                so they can send money to you.
+            </p>
+
+
+            <button
+                id="copyEmailButton"
+            >
+                📋 Copy Email
+            </button>
+
+
+            <p id="copyEmailMessage"></p>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- INFORMATION -->
+        <!-- ================================= -->
+
+        <section class="quick-actions">
+
+            <h2>
+                How to Receive Money
+            </h2>
+
+
+            <div class="profile-info">
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        1️⃣
+                    </span>
+
+                    <div>
+
+                        <p>
+                            Share your SwiftPay email
+                            with the sender.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        2️⃣
+                    </span>
+
+                    <div>
+
+                        <p>
+                            The sender enters your email
+                            on the Send Money page.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        3️⃣
+                    </span>
+
+                    <div>
+
+                        <p>
+                            The money will be added to
+                            your SwiftPay wallet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a
+            href="dashboard.html"
+            class="nav-item"
+        >
+
+            <span>
+                🏠
+            </span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="wallet.html"
+            class="nav-item"
+        >
+
+            <span>
+                💳
+            </span>
+
+            <small>
+                Wallet
+            </small>
+
+        </a>
+
+
+        <a
+            href="transactions.html"
+            class="nav-item"
+        >
+
+            <span>
+                📜
+            </span>
+
+            <small>
+                History
+            </small>
+
+        </a>
+
+
+        <a
+            href="profile.html"
+            class="nav-item"
+        >
+
+            <span>
+                👤
+            </span>
+
+            <small>
+                Profile
+            </small>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- ================================= -->
+    <!-- SUPABASE -->
+    <!-- ================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

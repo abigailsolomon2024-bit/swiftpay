@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | SwiftPay</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- SwiftPay CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="login-container">
+
+
+        <!-- Logo -->
+
+        <div class="login-logo">
+            💸
+        </div>
+
+
+        <!-- Heading -->
+
+        <h1>
+            Welcome Back
+        </h1>
+
+
+        <p>
+            Login to continue using SwiftPay.
+        </p>
+
+
+        <!-- Login Message -->
+
+        <div id="loginMessage"></div>
+
+
+        <!-- Login Form -->
+
+        <form id="loginForm">
+
+
+            <!-- Email -->
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email Address"
+                autocomplete="email"
+                required
+            >
+
+
+            <!-- Password -->
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                autocomplete="current-password"
+                required
+            >
+
+
+            <!-- Forgot Password -->
+
+            <a href="forgot-password.html">
+                Forgot Password?
+            </a>
+
+
+            <!-- Login Button -->
+
+            <button
+                type="submit"
+                id="loginButton"
+            >
+                Login
+            </button>
+
+
+        </form>
+
+
+        <!-- Sign Up -->
+
+        <p class="signup-text">
+
+            Don't have an account?
+
+            <a href="signup.html">
+                Create Account
+            </a>
+
+        </p>
+
+
+    </div>
+
+
+    <!-- Supabase Library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <!-- Supabase Configuration -->
+
+    <script src="supabase.js"></script>
+
+
+    <!-- SwiftPay JavaScript -->
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

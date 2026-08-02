@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Buy Data | SwiftPay</title>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head><body><header class="dashboard-header">
+
+    <div>
+
+        <h2>
+            SwiftPay
+        </h2>
+
+        <p>
+            Buy Data
+        </p>
+
+    </div>
+
+    <a
+        href="dashboard.html"
+        class="back-button"
+    >
+        ←
+    </a>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="quick-actions">
+
+        <h2>
+            Data Purchase
+        </h2>
+
+        <p>
+            Buy a data plan for your phone number.
+        </p>
+
+
+        <form id="dataForm">
+
+            <input
+                type="tel"
+                id="dataPhone"
+                placeholder="Phone Number"
+                required
+            >
+
+
+            <select
+                id="dataNetwork"
+                required
+            >
+
+                <option value="">
+                    Select Network
+                </option>
+
+                <option value="MTN">
+                    MTN
+                </option>
+
+                <option value="Airtel">
+                    Airtel
+                </option>
+
+                <option value="Glo">
+                    Glo
+                </option>
+
+                <option value="9mobile">
+                    9mobile
+                </option>
+
+            </select>
+
+
+            <select
+                id="dataPlan"
+                required
+            >
+
+                <option value="">
+                    Select Data Plan
+                </option>
+
+                <option value="500MB - ₦150">
+                    500MB - ₦150
+                </option>
+
+                <option value="1GB - ₦300">
+                    1GB - ₦300
+                </option>
+
+                <option value="2GB - ₦600">
+                    2GB - ₦600
+                </option>
+
+                <option value="5GB - ₦1,500">
+                    5GB - ₦1,500
+                </option>
+
+                <option value="10GB - ₦3,000">
+                    10GB - ₦3,000
+                </option>
+
+            </select>
+
+
+            <button
+                type="submit"
+                id="dataButton"
+            >
+                Buy Data
+            </button>
+
+
+            <p id="dataMessage"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+    <a
+        href="dashboard.html"
+        class="nav-item"
+    >
+        <span>🏠</span>
+        <small>Home</small>
+    </a>
+
+    <a
+        href="wallet.html"
+        class="nav-item"
+    >
+        <span>💳</span>
+        <small>Wallet</small>
+    </a>
+
+    <a
+        href="transactions.html"
+        class="nav-item"
+    >
+        <span>📜</span>
+        <small>History</small>
+    </a>
+
+    <a
+        href="profile.html"
+        class="nav-item"
+    >
+        <span>👤</span>
+        <small>Profile</small>
+    </a>
+
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="app.js"></script>
+
+</body></html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Cable TV | SwiftPay</title>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head><body><header class="dashboard-header">
+
+    <div>
+
+        <h2>
+            SwiftPay
+        </h2>
+
+        <p>
+            Cable TV Subscription
+        </p>
+
+    </div>
+
+    <a
+        href="dashboard.html"
+        class="back-button"
+    >
+        ←
+    </a>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <section class="quick-actions">
+
+        <h2>
+            Pay Cable TV
+        </h2>
+
+        <p>
+            Renew your cable subscription securely.
+        </p>
+
+
+        <form id="cableForm">
+
+            <select
+                id="cableProvider"
+                required
+            >
+
+                <option value="">
+                    Select Cable Provider
+                </option>
+
+                <option value="DStv">
+                    DStv
+                </option>
+
+                <option value="GOtv">
+                    GOtv
+                </option>
+
+                <option value="Startimes">
+                    Startimes
+                </option>
+
+            </select>
+
+
+            <input
+                type="text"
+                id="smartcardNumber"
+                placeholder="Smartcard / IUC Number"
+                required
+            >
+
+
+            <select
+                id="cablePlan"
+                required
+            >
+
+                <option value="">
+                    Select Subscription Plan
+                </option>
+
+                <option value="DStv Access - ₦2,000">
+                    DStv Access - ₦2,000
+                </option>
+
+                <option value="DStv Family - ₦4,000">
+                    DStv Family - ₦4,000
+                </option>
+
+                <option value="DStv Compact - ₦10,000">
+                    DStv Compact - ₦10,000
+                </option>
+
+                <option value="GOtv Smallie - ₦1,500">
+                    GOtv Smallie - ₦1,500
+                </option>
+
+                <option value="GOtv Jolli - ₦3,000">
+                    GOtv Jolli - ₦3,000
+                </option>
+
+                <option value="Startimes Basic - ₦2,000">
+                    Startimes Basic - ₦2,000
+                </option>
+
+            </select>
+
+
+            <button
+                type="submit"
+                id="cableButton"
+            >
+                Pay Subscription
+            </button>
+
+
+            <p id="cableMessage"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+    <a
+        href="dashboard.html"
+        class="nav-item"
+    >
+        <span>🏠</span>
+        <small>Home</small>
+    </a>
+
+    <a
+        href="wallet.html"
+        class="nav-item"
+    >
+        <span>💳</span>
+        <small>Wallet</small>
+    </a>
+
+    <a
+        href="transactions.html"
+        class="nav-item"
+    >
+        <span>📜</span>
+        <small>History</small>
+    </a>
+
+    <a
+        href="profile.html"
+        class="nav-item"
+    >
+        <span>👤</span>
+        <small>Profile</small>
+    </a>
+
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="app.js"></script>
+
+</body></html>

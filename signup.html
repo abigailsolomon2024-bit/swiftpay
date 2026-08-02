@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | SwiftPay</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- SwiftPay CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- SwiftPay Logo -->
+        <div class="login-logo">
+            💸
+        </div>
+
+        <!-- Heading -->
+        <h1>Create Account</h1>
+
+        <p>
+            Create your SwiftPay account to get started.
+        </p>
+
+        <!-- Error / Success Message -->
+        <div id="signupMessage"></div>
+
+        <!-- Sign Up Form -->
+        <form id="signupForm">
+
+            <!-- Full Name -->
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                autocomplete="name"
+                required
+            >
+
+            <!-- Email -->
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Email Address"
+                autocomplete="email"
+                required
+            >
+
+            <!-- Phone -->
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                autocomplete="tel"
+                required
+            >
+
+            <!-- Password -->
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create Password"
+                autocomplete="new-password"
+                minlength="6"
+                required
+            >
+
+            <!-- Confirm Password -->
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                autocomplete="new-password"
+                minlength="6"
+                required
+            >
+
+            <!-- Sign Up Button -->
+            <button type="submit" id="signupButton">
+                Create Account
+            </button>
+
+        </form>
+
+        <!-- Login Link -->
+        <p class="signup-text">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Supabase Configuration -->
+    <script src="supabase.js"></script>
+
+    <!-- SwiftPay JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>

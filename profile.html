@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile | SwiftPay</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================================= -->
+<!-- PROFILE HEADER -->
+<!-- ================================= -->
+
+<header class="dashboard-header">
+
+    <div>
+
+        <h2>
+            SwiftPay
+        </h2>
+
+        <p>
+            My Profile
+        </p>
+
+    </div>
+
+
+    <a
+        href="dashboard.html"
+        class="back-button"
+    >
+        ←
+    </a>
+
+</header>
+
+
+
+<!-- ================================= -->
+<!-- PROFILE CONTENT -->
+<!-- ================================= -->
+
+<main class="dashboard-container">
+
+
+    <!-- ================================= -->
+    <!-- PROFILE CARD -->
+    <!-- ================================= -->
+
+    <section class="profile-card">
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+
+        <h1 id="profileName">
+            SwiftPay User
+        </h1>
+
+
+        <p id="profileEmail">
+            Loading email...
+        </p>
+
+
+        <p id="profilePhone">
+            Loading phone...
+        </p>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- EDIT PROFILE -->
+    <!-- ================================= -->
+
+    <section class="quick-actions">
+
+        <h2>
+            Edit Profile
+        </h2>
+
+
+        <form id="editProfileForm">
+
+            <input
+                type="text"
+                id="editFullName"
+                placeholder="Full Name"
+                required
+            >
+
+
+            <input
+                type="tel"
+                id="editPhone"
+                placeholder="Phone Number"
+            >
+
+
+            <button
+                type="submit"
+                id="saveProfileButton"
+            >
+                Save Changes
+            </button>
+
+        </form>
+
+
+        <p id="editProfileMessage"></p>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- ACCOUNT INFORMATION -->
+    <!-- ================================= -->
+
+    <section class="quick-actions">
+
+        <h2>
+            Account Information
+        </h2>
+
+
+        <div class="profile-info">
+
+
+            <!-- Full Name -->
+
+            <div class="profile-info-item">
+
+                <span>
+                    👤
+                </span>
+
+                <div>
+
+                    <small>
+                        Full Name
+                    </small>
+
+                    <p id="profileFullName">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Email -->
+
+            <div class="profile-info-item">
+
+                <span>
+                    📧
+                </span>
+
+                <div>
+
+                    <small>
+                        Email
+                    </small>
+
+                    <p id="profileEmailInfo">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Phone -->
+
+            <div class="profile-info-item">
+
+                <span>
+                    📱
+                </span>
+
+                <div>
+
+                    <small>
+                        Phone
+                    </small>
+
+                    <p id="profilePhoneInfo">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SwiftPay Account Number -->
+
+            <div class="profile-info-item">
+
+                <span>
+                    🏦
+                </span>
+
+                <div>
+
+                    <small>
+                        SwiftPay Account Number
+                    </small>
+
+                    <p id="profileAccountNumber">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- PROFILE ACTIONS -->
+    <!-- ================================= -->
+
+    <section class="quick-actions">
+
+        <h2>
+            Account Actions
+        </h2>
+
+
+        <div class="action-grid">
+
+
+            <!-- Change Password -->
+
+            <button
+                type="button"
+                class="action-card"
+                id="changePasswordButton"
+            >
+
+                <span>
+                    🔐
+                </span>
+
+                <p>
+                    Change Password
+                </p>
+
+            </button>
+
+
+
+            <!-- Logout -->
+
+            <button
+                type="button"
+                class="action-card"
+                id="logoutButton"
+            >
+
+                <span>
+                    🚪
+                </span>
+
+                <p>
+                    Logout
+                </p>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ================================= -->
+        <!-- CHANGE PASSWORD FORM -->
+        <!-- ================================= -->
+
+        <div
+            id="changePasswordFormContainer"
+            style="display: none;"
+        >
+
+            <form id="changePasswordForm">
+
+
+                <input
+                    type="password"
+                    id="newPassword"
+                    placeholder="Enter new password"
+                    minlength="6"
+                    required
+                >
+
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm new password"
+                    minlength="6"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    id="updatePasswordButton"
+                >
+                    Update Password
+                </button>
+
+
+            </form>
+
+
+            <p id="changePasswordMessage"></p>
+
+        </div>
+
+
+    </section>
+
+
+    <p id="profileMessage"></p>
+
+
+</main>
+
+
+
+<!-- ================================= -->
+<!-- BOTTOM NAVIGATION -->
+<!-- ================================= -->
+
+<nav class="bottom-nav">
+
+
+    <a
+        href="dashboard.html"
+        class="nav-item"
+    >
+
+        <span>
+            🏠
+        </span>
+
+        <small>
+            Home
+        </small>
+
+    </a>
+
+
+    <a
+        href="wallet.html"
+        class="nav-item"
+    >
+
+        <span>
+            💳
+        </span>
+
+        <small>
+            Wallet
+        </small>
+
+    </a>
+
+
+    <a
+        href="transactions.html"
+        class="nav-item"
+    >
+
+        <span>
+            📜
+        </span>
+
+        <small>
+            History
+        </small>
+
+    </a>
+
+
+    <a
+        href="profile.html"
+        class="nav-item active"
+    >
+
+        <span>
+            👤
+        </span>
+
+        <small>
+            Profile
+        </small>
+
+    </a>
+
+
+</nav>
+
+
+
+<!-- ================================= -->
+<!-- SUPABASE -->
+<!-- ================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
