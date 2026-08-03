@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Receive Money | SwiftPay</title>
 
@@ -17,246 +11,131 @@
         rel="stylesheet"
     >
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <div class="app-container">
 
-    <!-- ================================= -->
-    <!-- HEADER -->
-    <!-- ================================= -->
+        <header class="page-header">
+            <a href="dashboard.html" class="back-btn">←</a>
+            <h1>Receive Money</h1>
+        </header>
 
-    <header class="dashboard-header">
+        <main class="receive-container">
 
-        <div>
+            <div class="receive-icon">
+                💰
+            </div>
 
-            <h2>
-                SwiftPay
-            </h2>
+            <h2>Receive Money</h2>
 
-            <p>
-                Receive Money
+            <p class="receive-subtitle">
+                Share your SwiftPay account number with the sender to receive money.
             </p>
 
-        </div>
+            <div class="account-card">
 
+                <span class="account-label">
+                    Your SwiftPay Account Number
+                </span>
 
-        <a
-            href="dashboard.html"
-            class="back-button"
-        >
-            ←
-        </a>
+                <div class="account-number-row">
+                    <strong id="accountNumber">Loading...</strong>
 
-    </header>
-
-
-
-    <!-- ================================= -->
-    <!-- RECEIVE MONEY -->
-    <!-- ================================= -->
-
-    <main class="dashboard-container">
-
-
-        <section class="balance-card">
-
-            <p>
-                Your SwiftPay Email
-            </p>
-
-            <h2 id="receiveEmail">
-                Loading...
-            </h2>
-
-            <p>
-                Share this email with another SwiftPay user
-                so they can send money to you.
-            </p>
-
-
-            <button
-                id="copyEmailButton"
-            >
-                📋 Copy Email
-            </button>
-
-
-            <p id="copyEmailMessage"></p>
-
-        </section>
-
-
-
-        <!-- ================================= -->
-        <!-- INFORMATION -->
-        <!-- ================================= -->
-
-        <section class="quick-actions">
-
-            <h2>
-                How to Receive Money
-            </h2>
-
-
-            <div class="profile-info">
-
-
-                <div class="profile-info-item">
-
-                    <span>
-                        1️⃣
-                    </span>
-
-                    <div>
-
-                        <p>
-                            Share your SwiftPay email
-                            with the sender.
-                        </p>
-
-                    </div>
-
+                    <button id="copyAccountBtn" class="copy-btn">
+                        Copy
+                    </button>
                 </div>
-
-
-                <div class="profile-info-item">
-
-                    <span>
-                        2️⃣
-                    </span>
-
-                    <div>
-
-                        <p>
-                            The sender enters your email
-                            on the Send Money page.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="profile-info-item">
-
-                    <span>
-                        3️⃣
-                    </span>
-
-                    <div>
-
-                        <p>
-                            The money will be added to
-                            your SwiftPay wallet.
-                        </p>
-
-                    </div>
-
-                </div>
-
 
             </div>
 
-        </section>
+            <div class="receive-info">
+                <p>💡 <strong>How it works</strong></p>
 
+                <p>
+                    Give your SwiftPay account number to anyone who wants
+                    to send money to you.
+                </p>
 
-    </main>
+                <p>
+                    You don't need to share your email address or password.
+                </p>
+            </div>
 
+            <button
+                class="primary-btn"
+                onclick="window.location.href='dashboard.html'"
+            >
+                Back to Dashboard
+            </button>
 
+        </main>
 
-    <!-- ================================= -->
-    <!-- BOTTOM NAVIGATION -->
-    <!-- ================================= -->
-
-    <nav class="bottom-nav">
-
-
-        <a
-            href="dashboard.html"
-            class="nav-item"
-        >
-
-            <span>
-                🏠
-            </span>
-
-            <small>
-                Home
-            </small>
-
-        </a>
-
-
-        <a
-            href="wallet.html"
-            class="nav-item"
-        >
-
-            <span>
-                💳
-            </span>
-
-            <small>
-                Wallet
-            </small>
-
-        </a>
-
-
-        <a
-            href="transactions.html"
-            class="nav-item"
-        >
-
-            <span>
-                📜
-            </span>
-
-            <small>
-                History
-            </small>
-
-        </a>
-
-
-        <a
-            href="profile.html"
-            class="nav-item"
-        >
-
-            <span>
-                👤
-            </span>
-
-            <small>
-                Profile
-            </small>
-
-        </a>
-
-
-    </nav>
-
-
-
-    <!-- ================================= -->
-    <!-- SUPABASE -->
-    <!-- ================================= -->
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
     <script src="supabase.js"></script>
 
-    <script src="app.js"></script>
+    <script>
 
+        async function loadAccountNumber() {
+
+            const {
+                data: { user },
+                error
+            } = await supabaseClient.auth.getUser();
+
+            if (error || !user) {
+                window.location.href = "login.html";
+                return;
+            }
+
+            const { data, error: profileError } = await supabaseClient
+                .from("profiles")
+                .select("account_number")
+                .eq("id", user.id)
+                .single();
+
+            if (profileError) {
+                console.error(profileError);
+                document.getElementById("accountNumber").textContent =
+                    "Account number unavailable";
+                return;
+            }
+
+            document.getElementById("accountNumber").textContent =
+                data.account_number || "Not assigned";
+        }
+
+
+        document.getElementById("copyAccountBtn").addEventListener("click", async function () {
+
+            const accountNumber =
+                document.getElementById("accountNumber").textContent;
+
+            if (
+                accountNumber &&
+                accountNumber !== "Loading..." &&
+                accountNumber !== "Not assigned"
+            ) {
+
+                await navigator.clipboard.writeText(accountNumber);
+
+                this.textContent = "Copied ✓";
+
+                setTimeout(() => {
+                    this.textContent = "Copy";
+                }, 2000);
+            }
+
+        });
+
+
+        loadAccountNumber();
+
+    </script>
 
 </body>
-
 </html>
