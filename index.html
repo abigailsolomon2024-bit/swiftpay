@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
-    >S
+    >
 
     <!-- SwiftPay CSS -->
     <link rel="stylesheet" href="style.css">
@@ -21,31 +21,24 @@
     <!-- Splash Screen -->
     <div class="splash-screen">
 
-        <!-- Logo -->
         <div class="logo">
             💸
         </div>
 
-        <!-- App Name -->
         <h1>SwiftPay</h1>
 
-        <!-- Tagline -->
         <p>Fast. Secure. Simple.</p>
 
-        <!-- Loading Animation -->
         <div class="loader"></div>
 
     </div>
 
-    <!-- Supabase Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <!-- Supabase Configuration -->
-    <script src="supabase.js"></script>
-
-    <!-- SwiftPay JavaScript -->
-    <script src="app.js"></script>
+    <!-- Go to Login after 3 seconds -->
+    <script>
+        setTimeout(function () {
+            window.location.href = "login.html";
+        }, 3000);
+    </script>
 
 </body>
 </html>
-
